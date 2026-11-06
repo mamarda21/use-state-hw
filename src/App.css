@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f9fafb;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #c4b5fd;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #9ca3af;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 14px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.card h2 {
+  color: #c4b5fd;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.card p {
+  margin-top: 12px;
+  color: #d1d5db;
+}
+
+input {
+  width: 100%;
+  padding: 11px 12px;
+  background: #111827;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+input:focus {
+  border-color: #a78bfa;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #8b5cf6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #7c3aed;
+}
+
+.input-row,
+.button-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.input-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #374151;
+}
+
+.list-item span {
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #dc2626;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e9d5ff !important;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.success {
+  color: #4ade80 !important;
+  font-weight: bold;
+}
+
+.theme-card.light {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.theme-card.light p {
+  color: #374151;
+}
+
+.theme-card.dark {
+  background: #080d18;
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .app {
+    padding: 25px 0;
+  }
+}
